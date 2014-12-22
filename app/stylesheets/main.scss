@@ -1,0 +1,49 @@
+//
+// weights:
+// 
+// medium: 500
+// regular: 400
+// light: 300
+// thin: 200
+// ultralight: 100
+//
+
+@mixin helvetica($font-weight: 300, $font-size: 16px) {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: $font-weight;
+  font-style: normal;
+  font-size: $font-size;
+  text-transform: uppercase;
+}
+
+#app {
+  @include helvetica;
+  padding: 1em;
+  text-align: center;
+
+}
+
+.headline {
+  @include helvetica(100, 36px);
+  margin: 1em 0;
+}
+
+.scale {
+  @include helvetica(200, 28px);
+  margin: 1em 0;
+}
+
+.root-note {
+  @include helvetica(500, 150px);
+  margin: 1rem 0;
+}
+
+.shape {
+  @include helvetica(300, 60px);
+  margin: 0 0 1rem;
+
+  small {
+    font-size: 60px;
+    font-weight: 100;
+  }
+}
