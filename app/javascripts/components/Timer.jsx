@@ -28,13 +28,14 @@ var Timer = React.createClass({
   },
   componentWillUnmount: function() {
     clearInterval(this.interval);
+    AppStore.removeChangeListener(this._onChange);
   },
   componentDidMount: function() {
     this.interval = setInterval(this._tick, 1000);
   },
   render: function() {
     return (
-      <small>
+      <small className="timer">
         ({ this.state.timeLeft })
       </small>
     )

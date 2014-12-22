@@ -10,12 +10,8 @@ var rootNotes = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'
 
 var boxShapes = require('../data/boxShapes.json');
 
-var _timeLeft = 30;
+var _timeLeft = 60;
 var _pattern = _setPattern();
-
-function getPattern() {
-  return _pattern;
-}
 
 function _setPattern() {
   var rootNote = _getRootNote();

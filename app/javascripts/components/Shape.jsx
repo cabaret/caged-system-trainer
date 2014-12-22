@@ -1,10 +1,14 @@
 var React = require('react');
+
 var AppStore = require('../stores/app-store.js');
 var AppActions = require('../actions/app-actions.js');
 
+var Box = require('../components/Box.jsx');
+
 function getShape() {
   return {
-    shape: AppStore.getPattern().shape
+    shape: AppStore.getPattern().shape,
+    boxShape: AppStore.getPattern().boxShape
   };
 }
 
@@ -25,6 +29,7 @@ var Shape = React.createClass({
           { this.state.shape }
           <small>-Shape</small>
         </p>
+        <Box box={ this.state.boxShape } />
       </div>
     );
   }
